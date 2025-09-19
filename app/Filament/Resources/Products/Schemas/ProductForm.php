@@ -46,6 +46,11 @@ class ProductForm
                 //     ->relationship('category', 'name') // get data select by category
                 //     ->tableConfiguration(CategoriesTable::class)
 
+                Select::make('tags')
+                    ->label('Tags')
+                    ->relationship('tags', 'name')
+                    ->multiple()
+
             ])->columns(1); // make input is one column (default is 2)
     }
 }
