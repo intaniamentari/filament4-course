@@ -25,6 +25,7 @@ class ProductsTable
                     ->sortable(),
                 TextColumn::make('status'),
                 TextColumn::make('category.name'), // show the relationship name from category table
+                TextColumn::make('tags.name'), // show the relationship name from tags table even if this is many to many relationship
             ])
             ->defaultSort('created_at', 'desc') // default sort by created_at
             ->filters([
